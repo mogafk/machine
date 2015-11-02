@@ -10,6 +10,10 @@
   color: white;
   padding: 0 15px; }
 
+.top-bar {
+  background-color: #66cc99;
+}
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create mixins using Foundation classes
 @mixin twelve-columns {
@@ -90,3 +94,6 @@ section {
   @extend .radius;
   @extend .tiny;
 }
+
+
+

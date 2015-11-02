@@ -106,11 +106,13 @@ GEM
     foundation-rails (5.5.3.2)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
+    geocoder (1.2.12)
     gibbon (2.1.0)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     haml (4.0.7)
       tilt
     hitimes (1.2.3)
@@ -277,7 +279,9 @@ DEPENDENCIES
   factory_girl_rails
   faker
   foundation-rails
+  geocoder
   gibbon
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   launchy
