@@ -1,0 +1,48 @@
+
+<p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+<h1>Список меток</h1>
+
+<table style='width: device-width';
+>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Body</th>
+      <th>Status</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post, user| %>
+      <tr>
+        <td><%= post.user_id %></td>
+        <td><%= post.body %></td>
+        <td><%= post.status %></td>
+        <td><%= post.latitude %></td>
+        <td><%= post.longitude %></td>
+        <td><%= post.address %></td>
+        <td><%= link_to 'Show', post %></td>
+        <% if current_user.id == post.user_id %>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%  end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+
+<%= render 'map' %>
+
+<% else %>
+
+<h2> Зайдите, чтобы увидеть карту </h2>
+
+<% end %>
