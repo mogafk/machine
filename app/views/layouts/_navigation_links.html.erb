@@ -1,7 +1,7 @@
 <%# add navigation links to this file %>
 <% if user_signed_in? %>
   <li><%= link_to 'Настройки профиля', edit_user_registration_path %></li>
-  <li><%= link_to 'Выход', destroy_user_session_path, :method=>'delete' %></li>
+
 <% else %>
   <li><%= link_to 'Вход', new_user_session_path %></li>
   <li><%= link_to 'Регистрация', new_user_registration_path %></li>
@@ -11,4 +11,5 @@
     <li><%= link_to 'Admin', '/admin' %></li>
     <li><%= link_to 'Users', users_path %></li>
   <% end %>
+<li><%= link_to 'Выход', destroy_user_session_path, :method=>'delete' %></li>
 <% end %>

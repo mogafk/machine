@@ -11,7 +11,18 @@
   padding: 0 15px; }
 
 .top-bar {
+  background-color: #66cc99;}
+  .top-bar-section li {
   background-color: #66cc99;
+}
+
+
+.nav-btn {
+  background-color: #66cc99;
+}
+.ey_nav_div {
+  float: none;
+  text-align: center;
 }
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
@@ -95,5 +106,49 @@ section {
   @extend .tiny;
 }
 
+.button {
+  color: #ffffff;
+}
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4rem;
+  p {
+    &.slogan {
+      color: #8d9093;
+      font-size: 1rem;
+      margin: 0 0 1rem;
+    }
+    &.copywrite {
+      color: #8f9296;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+  .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3rem 0 2rem;
+    margin: 0;
+    &::after {
+      content: "•";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+    &:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem;
+    }
+  }
+}
+   
