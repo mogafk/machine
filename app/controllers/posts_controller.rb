@@ -6,15 +6,21 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
-  marker.lat post.latitude
-  marker.lng post.longitude
-  marker.infowindow post.body
-  end
+      marker.lat post.latitude
+      marker.lng post.longitude
+      marker.infowindow post.body
+    end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
+    @array = Gmaps4rails.build_markers(@post) do |post, marker|
+      marker.lat post.latitude
+      marker.lng post.longitude
+      marker.infowindow post.body
+    end 
   end
 
   # GET /posts/new
@@ -45,7 +51,6 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    if current_user.id == post.user_id
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -55,7 +60,7 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
-  end
+  
   end
 
   # DELETE /posts/1

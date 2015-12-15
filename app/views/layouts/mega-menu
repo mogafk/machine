@@ -1,0 +1,45 @@
+<li>
+		<li>
+			<a href="#" data-dropdown="menu-3" data-options="is_hover:true">
+				<strong>Листовки</strong>
+				</a>
+				<div id="menu-3" data-dropdown-content class="large f-dropdown content row" >
+				<div class="large-4 columns">
+					<!-- Heading 1 -->
+					<ul>
+						<li><label>Heading 1</label></li>
+						<li><img src="http://www.tatu.announcements.ru/albums/plokat_sssr/IndustrySovPost/industrysovpost_00008.jpg"></li>
+					</ul>
+				</div>
+				<div class="large-4 columns">
+					<!-- Heading 2 -->
+					<ul>
+						<li><label>Heading 2</label></li>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="large-4 columns">
+					<!-- Heading 3 -->
+					<ul>
+						<li><label>Heading 3</label></li>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div>
+				<!--<div class="large-3 columns">
+					 Heading 4 
+					<ul>
+						<li><label>Heading 4</label></li>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li><a href="#">Link 4</a></li>
+					</ul>
+				</div> -->
+				</div>
+	</li>
