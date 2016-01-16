@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223231344) do
+ActiveRecord::Schema.define(version: 20160116170903) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "title"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20151223231344) do
   create_table "posts", force: :cascade do |t|
     t.string   "body"
     t.integer  "status"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.float    "lat"
+    t.float    "lng"
     t.string   "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
