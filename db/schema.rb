@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104230914) do
+ActiveRecord::Schema.define(version: 20151223231344) do
+
+  create_table "documents", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "flyer_file_name"
+    t.string   "flyer_content_type"
+    t.integer  "flyer_file_size"
+    t.datetime "flyer_updated_at"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "body"
@@ -42,6 +53,8 @@ ActiveRecord::Schema.define(version: 20151104230914) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.integer  "role"
+    t.float    "current_latitude"
+    t.float    "current_longitude"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
