@@ -8,13 +8,15 @@
 
 
 <script type="text/javascript">
+
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers(<%=raw @hash.to_json %>);
   handler.bounds.extend({lat:55.75,lng:37.61});
   handler.fitMapToBounds();
-  handler.setZoom(5);
+  handler.getMap().setZoom(5);
 });
+
 </script>
 
 
