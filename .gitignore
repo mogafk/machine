@@ -49,6 +49,7 @@ db/*.sqlite3
 /capybara-*.html
 /gems
 /specifications
+/db/migrate/20160117155527_drop_documents.rb
 rerun.txt
 pickle-email-*.html
 .zeus.sock
