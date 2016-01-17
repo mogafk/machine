@@ -14,8 +14,21 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers(<%=raw @hash.to_json %>);
   handler.bounds.extend({lat:55.75,lng:37.61});
   handler.fitMapToBounds();
-  handler.getMap().setZoom(5);
+  handler.getMap().setZoom(8);
+  handler.map.centerOn(marker);
 });
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  if(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(displayOnMap);
+});
+
+function displayOnMap(position){
+  var marker = handler.addMarker({
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  });
+  handler.map.centerOn(marker);
+};
 
 </script>
 
