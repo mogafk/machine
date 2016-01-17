@@ -44,8 +44,8 @@ handler.buildMap({ internal: {id: 'geolocation'} }, function(){
 
 function displayOnMap(position){
   var marker = handler.addMarker({
-    lat: position.coords.lat,
-    lng: position.coords.lng
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
   });
   handler.map.centerOn(marker);
 };
