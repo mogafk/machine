@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :flyers
   resources :posts
   resources :visitors
   root to: 'posts#index'

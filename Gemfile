@@ -29,6 +29,7 @@ gem 'upmin-admin'
 
 #работа с файлами
 gem 'paperclip', "~>4.3"
+gem 'aws-sdk', "<2.0"
 
 group :development do
   gem 'better_errors'

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Листовки</h1> <%= link_to 'Добавить новую листовку', new_flyer_path %>
+
+
+    
+      
+       
+<div class="row">
+  <% @flyers.each do |flyer| %>
+  <div class=" medium-4 columns">
+    <div class="card">
+      <div class="image">
+        <%= image_tag flyer.article.url(:thumb) %>
+        <span class="title"><%= flyer.title %></span>
+      </div>
+      <div class="content">
+        <p><%= flyer.descr %></p>
+      </div>
+      <div class="action">
+        <table><tr><a href='#'><%= link_to "Скачать", flyer.article.url(:original, false) %></a></tr>
+        <tr>
+        <td><%= link_to 'Edit', edit_flyer_path(flyer) %></td>
+        <td><%= link_to 'Destroy', flyer, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
+      </table>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+

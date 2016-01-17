@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160117155527) do
+ActiveRecord::Schema.define(version: 20160117171631) do
+
+  create_table "flyers", force: :cascade do |t|
+    t.string   "descr"
+    t.string   "title"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "article_file_name"
+    t.string   "article_content_type"
+    t.integer  "article_file_size"
+    t.datetime "article_updated_at"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "body"
