@@ -9,9 +9,9 @@
   <li><%= link_to 'Регистрация', new_user_registration_path %></li>
 <% end %>
 <% if user_signed_in? %>
-	<li class="has-dropdown"><a href="#">Листовки</a>
+	<li class="has-dropdown"><a href="#"><%= link_to 'Листовки', flyers_path %></a>
     <ul class="dropdown">
-        <li><label>Dropdown Level 3 Label</label></li>
+        <li><label></label></li>
         <li class="has-dropdown"><a href="#">Чайка</a>
         	<div class="dropdown">
         		<a href="https://md.fbk.info/media/materials/chaika_A4.pdf"><img src="https://st.navalny.com/media/bim/fb/86/fb86da48561844df81fa96d6480bcb61.jpg"></a></div>
@@ -23,7 +23,7 @@
 </li>
 <li class="divider"></li>
   <% if current_user.try(:admin?) %>
-    <li><%= link_to 'Admin', '/admin' %></li>
+    <li><%= link_to 'Админка', '/admin' %></li>
     <li><%= link_to 'Пользователи', users_path %></li>
   <% end %>
 <li><%= link_to 'Выход', destroy_user_session_path, :method=>'delete' %></li>

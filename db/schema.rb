@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160117171631) do
+ActiveRecord::Schema.define(version: 20160118004047) do
 
   create_table "flyers", force: :cascade do |t|
     t.string   "descr"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20160117171631) do
   create_table "posts", force: :cascade do |t|
     t.string   "body"
     t.integer  "status"
-    t.float    "lat"
-    t.float    "lng"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

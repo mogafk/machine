@@ -20,7 +20,7 @@
   
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.collection_select(:body, Flyer.all, :title, :title) %>
   </div>
   <div class="field">
     <%= f.label :address %><br>

@@ -152,43 +152,16 @@ section {
   }
 }
 
-.f-dropdown.content ul li{
-    float:none;
-  }
-  .f-dropdown:after{
-    border-style: none !important;
-  }
 
-        .mega-menu .open {
-        border-top: none;
-        border-color: #CCC;
-        background: transparent; /* Old browsers */
-        background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 96%, #d3d3d3 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(96%,#ffffff), color-stop(100%,#d3d3d3)); /* Chrome,Safari4+ */
-        background: transparent !important; /*-webkit-linear-gradient(top,  #ffffff 0%,#ffffff 96%,#d3d3d3 100%);*/ /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 96%,#d3d3d3 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 96%,#d3d3d3 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 96%,#d3d3d3 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
-        left: 0 !important; /*<!-- !important overwrites inline style applied via Foundation JS */ 
-      }
-   #menu-3 {
-    left: 0!important;
 
-   }
 
-#menu-3 img
-{width: 400px;
-height: auto;
-}
 
 @import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
 
-html,body { // for demo only
-  background: #FAFAFA;
-}
+
 
 .card {
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
