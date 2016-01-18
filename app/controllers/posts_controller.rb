@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       marker.lat post.latitude
       marker.lng post.longitude
       marker.infowindow render_to_string(:partial => 'layouts/marker', :locals => {:object=> post})
-    end
+  
     end 
   end
 
