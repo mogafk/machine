@@ -17,14 +17,12 @@ function displayOnMap(position){
 };
     </script>
 
-      <div class="row collapse">
-        <div class="large-8 small-9 columns">
-          <input type="text" placeholder="Find Stuff">
-        </div>
+      
+        
         <div class="large-4 small-3 columns">
           <a href="#" ><%= button_to 'New Post', new_post_path, :class => "button", :method => :get  %></a>
         </div>
-      </div>
+      
  
 
 <%= render 'map' %>
