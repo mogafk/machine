@@ -19,7 +19,8 @@ class PostsController < ApplicationController
     @array = Gmaps4rails.build_markers(@post) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude
-      marker.infowindow post.body
+      marker.infowindow render_to_string(:partial => 'layouts/marker', :locals => {:object=> post})
+    end
     end 
   end
 
