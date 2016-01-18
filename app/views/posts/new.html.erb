@@ -20,12 +20,14 @@
   
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.collection_select(:body, Flyer.all, :title, :title) %>
+    <%= f.collection_select(:body, Flyer.all, :title, :title, {prompt: 'Выберите листовку'}) %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
+  <%= f.label 'Фото' %>
+  <%= f.file_field :photo, placeholder: "Добавь фото размещённой листовки"%>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude
-      marker.infowindow post.body
+      marker.infowindow render_to_string(:partial => 'layouts/marker', :locals => {:object=> post})
     end
   end
 
@@ -88,6 +88,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit( :body, :status, :latitude, :longitude, :address)
+      params.require(:post).permit( :body, :status, :latitude, :longitude, :address,:photo)
     end
 end
